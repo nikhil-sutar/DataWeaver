@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER':'apps.inventory.utils.exception_handlers.custom_exception_handler'
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_filter',
+    'django_filters',
     'apps.inventory',
 ]
 
